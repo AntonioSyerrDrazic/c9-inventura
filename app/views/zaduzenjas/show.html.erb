@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id zaduzenja:</strong>
+  <%= @zaduzenja.id_zaduzenja %>
+</p>
+
+<p>
+  <strong>Datum zaduzenja:</strong>
+  <%= @zaduzenja.datum_zaduzenja %>
+</p>
+
+<p>
+  <strong>Fk sifra inventara:</strong>
+  <%= @zaduzenja.fk_sifra_inventara %>
+</p>
+
+<p>
+  <strong>Fk sifra korisnika:</strong>
+  <%= @zaduzenja.fk_sifra_korisnika %>
+</p>
+
+<%= link_to 'Edit', edit_zaduzenja_path(@zaduzenja) %> |
+<%= link_to 'Back', zaduzenjas_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id korisnika:</strong>
+  <%= @korisnik.id_korisnika %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @korisnik.username %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @korisnik.password %>
+</p>
+
+<p>
+  <strong>Ime:</strong>
+  <%= @korisnik.ime %>
+</p>
+
+<p>
+  <strong>Prezime:</strong>
+  <%= @korisnik.prezime %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @korisnik.email %>
+</p>
+
+<p>
+  <strong>Broj telefona:</strong>
+  <%= @korisnik.broj_telefona %>
+</p>
+
+<%= link_to 'Edit', edit_korisnik_path(@korisnik) %> |
+<%= link_to 'Back', korisniks_path %>

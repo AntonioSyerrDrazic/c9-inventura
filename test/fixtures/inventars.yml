@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_inventara: 1
+  naziv_inventara: MyString
+  kolicina: 1
+  fk_sifra_lokacije: 1
+  fk_sifra_vrste_inventara: 1
+
+two:
+  id_inventara: 1
+  naziv_inventara: MyString
+  kolicina: 1
+  fk_sifra_lokacije: 1
+  fk_sifra_vrste_inventara: 1

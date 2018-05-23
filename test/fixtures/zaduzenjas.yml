@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_zaduzenja: 1
+  datum_zaduzenja: 2018-05-22
+  fk_sifra_inventara: 1
+  fk_sifra_korisnika: 1
+
+two:
+  id_zaduzenja: 1
+  datum_zaduzenja: 2018-05-22
+  fk_sifra_inventara: 1
+  fk_sifra_korisnika: 1

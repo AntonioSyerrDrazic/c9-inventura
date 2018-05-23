@@ -1,0 +1,33 @@
+<%= form_for(@zaduzenja) do |f| %>
+  <% if @zaduzenja.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@zaduzenja.errors.count, "error") %> prohibited this zaduzenja from being saved:</h2>
+
+      <ul>
+      <% @zaduzenja.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :id_zaduzenja %><br>
+    <%= f.number_field :id_zaduzenja, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :datum_zaduzenja %><br>
+    <%= f.date_select :datum_zaduzenja, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :fk_sifra_inventara %><br>
+    <%= f.number_field :fk_sifra_inventara, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :fk_sifra_korisnika %><br>
+    <%= f.number_field :fk_sifra_korisnika, class: "form-control" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Prihvati", class: 'btn btn-dark' %>
+  </div>
+<% end %>

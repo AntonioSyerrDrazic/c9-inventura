@@ -1,0 +1,37 @@
+<%= form_for(@inventar) do |f| %>
+  <% if @inventar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@inventar.errors.count, "error") %> prohibited this inventar from being saved:</h2>
+
+      <ul>
+      <% @inventar.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :id_inventara %><br>
+    <%= f.number_field :id_inventara, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :naziv_inventara %><br>
+    <%= f.text_field :naziv_inventara, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :kolicina %><br>
+    <%= f.number_field :kolicina, class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :fk_sifra_lokacije %><br>
+    <%= f.number_field :fk_sifra_lokacije, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :fk_sifra_vrste_inventara %><br>
+    <%= f.number_field :fk_sifra_vrste_inventara, class: "form-control" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Prihvati",class: "btn btn-dark" %>
+  </div>
+<% end %>

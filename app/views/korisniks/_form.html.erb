@@ -1,0 +1,45 @@
+<%= form_for(@korisnik) do |f| %>
+  <% if @korisnik.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@korisnik.errors.count, "error") %> prohibited this korisnik from being saved:</h2>
+
+      <ul>
+      <% @korisnik.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id_korisnika %><br>
+    <%= f.number_field :id_korisnika %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :ime %><br>
+    <%= f.text_field :ime %>
+  </div>
+  <div class="field">
+    <%= f.label :prezime %><br>
+    <%= f.text_field :prezime %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :broj_telefona %><br>
+    <%= f.text_field :broj_telefona %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

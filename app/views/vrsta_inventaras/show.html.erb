@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sifra vrste:</strong>
+  <%= @vrsta_inventara.sifra_vrste %>
+</p>
+
+<p>
+  <strong>Naziv vrste:</strong>
+  <%= @vrsta_inventara.naziv_vrste %>
+</p>
+
+<%= link_to 'Izmjena', edit_vrsta_inventara_path(@vrsta_inventara),class: 'btn btn-dark' %> |
+<%= link_to 'Natrag', vrsta_inventaras_path, class: 'btn btn-dark' %>

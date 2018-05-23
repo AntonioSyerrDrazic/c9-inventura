@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Popis zaduženja</h1>
+
+<table class="table table-bordered table-striped table-dark">
+  <thead class="thead-dark">
+    <tr>
+      <th>Id zaduženja</th>
+      <th>Datum zaduženja</th>
+      <th>Inventar</th>
+      <th>Korisnik</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @zaduzenjas.each do |zaduzenja| %>
+      <tr>
+        <td><%= zaduzenja.id_zaduzenja %></td>
+        <td><%= zaduzenja.datum_zaduzenja %></td>
+        <td><%= zaduzenja.fk_sifra_inventara %></td>
+        <td><%= zaduzenja.fk_sifra_korisnika %></td>
+        <td><%= link_to 'Detalji', zaduzenja %></td>
+        <td><%= link_to 'Izmjena', edit_zaduzenja_path(zaduzenja) %></td>
+        <td><%= link_to 'Brisanje', zaduzenja, method: :delete, data: { confirm: 'Jeste li sigurni?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo zaduženje', new_zaduzenja_path, class: 'btn btn-dark' %>

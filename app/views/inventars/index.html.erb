@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Popis inventara</h1>
+
+<table class="table table-bordered table-striped table-dark">
+  <thead class="thead-dark">
+    <tr>
+      <th>Id inventara</th>
+      <th>Naziv inventara</th>
+      <th>Kolicina</th>
+      <th>Lokacija</th>
+      <th>Vrsta inventara</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @inventars.each do |inventar| %>
+      <tr>
+        <td><%= inventar.id_inventara %></td>
+        <td><%= inventar.naziv_inventara %></td>
+        <td><%= inventar.kolicina %></td>
+        <td><%= inventar.fk_sifra_lokacije %></td>
+        <td><%= inventar.fk_sifra_vrste_inventara %></td>
+        <td><%= link_to 'Detalji', inventar %></td>
+        <td><%= link_to 'Izmjena', edit_inventar_path(inventar) %></td>
+        <td><%= link_to 'Brisanje', inventar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novi Inventar', new_inventar_path, class: 'btn btn-dark' %>

@@ -1,0 +1,41 @@
+<%= form_for(@lokacija) do |f| %>
+  <% if @lokacija.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lokacija.errors.count, "error") %> prohibited this lokacija from being saved:</h2>
+
+      <ul>
+      <% @lokacija.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id_lokacije %><br>
+    <%= f.number_field :id_lokacije %>
+  </div>
+  <div class="field">
+    <%= f.label :grad %><br>
+    <%= f.text_field :grad %>
+  </div>
+  <div class="field">
+    <%= f.label :drzava %><br>
+    <%= f.text_field :drzava %>
+  </div>
+  <div class="field">
+    <%= f.label :adresa %><br>
+    <%= f.text_field :adresa %>
+  </div>
+  <div class="field">
+    <%= f.label :post_br %><br>
+    <%= f.number_field :post_br %>
+  </div>
+  <div class="field">
+    <%= f.label :naziv_prostora %><br>
+    <%= f.text_field :naziv_prostora %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

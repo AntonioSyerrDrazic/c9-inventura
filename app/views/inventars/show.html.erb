@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id inventara:</strong>
+  <%= @inventar.id_inventara %>
+</p>
+
+<p>
+  <strong>Naziv inventara:</strong>
+  <%= @inventar.naziv_inventara %>
+</p>
+
+<p>
+  <strong>Kolicina:</strong>
+  <%= @inventar.kolicina %>
+</p>
+
+<p>
+  <strong>Fk sifra lokacije:</strong>
+  <%= @inventar.fk_sifra_lokacije %>
+</p>
+
+<p>
+  <strong>Fk sifra vrste inventara:</strong>
+  <%= @inventar.fk_sifra_vrste_inventara %>
+</p>
+
+<%= link_to 'Edit', edit_inventar_path(@inventar) %> |
+<%= link_to 'Back', inventars_path %>

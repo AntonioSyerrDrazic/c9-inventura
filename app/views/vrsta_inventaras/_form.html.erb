@@ -1,0 +1,26 @@
+<%= form_for(@vrsta_inventara) do |f| %>
+  <% if @vrsta_inventara.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vrsta_inventara.errors.count, "error") %> prohibited this vrsta_inventara from being saved:</h2>
+
+      <ul>
+      <% @vrsta_inventara.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    Šifra vrste<br></br>
+    <%= f.number_field :sifra_vrste, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    Naziv vrste<br></br>
+    <%= f.text_field :naziv_vrste, class: "form-control" %>
+  </div>
+  <div class="actions">
+    </br>
+    <%= f.submit "Prihvati", class: 'btn btn-dark'%>
+  </div>
+<% end %>

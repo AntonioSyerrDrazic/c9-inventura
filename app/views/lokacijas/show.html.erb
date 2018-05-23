@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id lokacije:</strong>
+  <%= @lokacija.id_lokacije %>
+</p>
+
+<p>
+  <strong>Grad:</strong>
+  <%= @lokacija.grad %>
+</p>
+
+<p>
+  <strong>Drzava:</strong>
+  <%= @lokacija.drzava %>
+</p>
+
+<p>
+  <strong>Adresa:</strong>
+  <%= @lokacija.adresa %>
+</p>
+
+<p>
+  <strong>Post br:</strong>
+  <%= @lokacija.post_br %>
+</p>
+
+<p>
+  <strong>Naziv prostora:</strong>
+  <%= @lokacija.naziv_prostora %>
+</p>
+
+<%= link_to 'Edit', edit_lokacija_path(@lokacija) %> |
+<%= link_to 'Back', lokacijas_path %>
